@@ -2,9 +2,7 @@
 
 namespace App\Providers;
 
-use App\Models\Account;
 use Illuminate\Support\ServiceProvider;
-use Tenancy\Identification\Contracts\ResolvesTenants;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -26,5 +24,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+        \Tenant::loadConnections();
     }
 }

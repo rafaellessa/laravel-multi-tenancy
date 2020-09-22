@@ -40,22 +40,24 @@
     <property name="DatabaseDriversLRU" value="mysql&#10;mongo" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/account-api/code/app/Tenant" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/account-api/code/app/Models" />
+      <recent name="$PROJECT_DIR$/account-api/code/database/migrations/tenant" />
+      <recent name="$PROJECT_DIR$/account-api/code/database/migrations/system" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/account-api/code/app/Tenant" />
       <recent name="$PROJECT_DIR$/account-api/code/app/Repositories" />
       <recent name="$PROJECT_DIR$/account-api/code/app/Services" />
       <recent name="$PROJECT_DIR$/account-api/code/app/Http/Controllers" />
       <recent name="$PROJECT_DIR$/account-api/code/app/Http/Requests" />
-      <recent name="$PROJECT_DIR$/account-api" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/account-api/code/app/Models" />
     </key>
   </component>
   <component name="RunManager">
@@ -73,7 +75,7 @@
       <updated>1600633911220</updated>
       <workItem from="1600633912397" duration="9713000" />
       <workItem from="1600691207937" duration="7303000" />
-      <workItem from="1600787228740" duration="631000" />
+      <workItem from="1600787228740" duration="3319000" />
     </task>
     <servers />
   </component>
@@ -93,26 +95,30 @@
       <screen x="48" y="27" width="1872" height="1053" />
     </state>
     <state x="773" y="234" width="412" height="645" key="#com.intellij.ide.util.MemberChooser/48.27.1872.1053/1920.0.1600.900@48.27.1872.1053" timestamp="1600694558464" />
+    <state x="717" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1600789204281">
+      <screen x="48" y="27" width="1872" height="1053" />
+    </state>
+    <state x="717" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/48.27.1872.1053/1920.0.1600.900@48.27.1872.1053" timestamp="1600789204281" />
     <state x="767" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1600702420307">
       <screen x="48" y="27" width="1872" height="1053" />
     </state>
     <state x="767" y="311" width="424" height="491" key="FileChooserDialogImpl/48.27.1872.1053/1920.0.1600.900@48.27.1872.1053" timestamp="1600702420307" />
-    <state width="1766" height="275" key="GridCell.Tab.0.bottom" timestamp="1600696494819">
+    <state width="1766" height="275" key="GridCell.Tab.0.bottom" timestamp="1600790408688">
       <screen x="48" y="27" width="1872" height="1053" />
     </state>
-    <state width="1766" height="275" key="GridCell.Tab.0.bottom/48.27.1872.1053/1920.0.1600.900@48.27.1872.1053" timestamp="1600696494819" />
-    <state width="1766" height="275" key="GridCell.Tab.0.center" timestamp="1600696494819">
+    <state width="1766" height="275" key="GridCell.Tab.0.bottom/48.27.1872.1053/1920.0.1600.900@48.27.1872.1053" timestamp="1600790408688" />
+    <state width="1766" height="275" key="GridCell.Tab.0.center" timestamp="1600790408688">
       <screen x="48" y="27" width="1872" height="1053" />
     </state>
-    <state width="1766" height="275" key="GridCell.Tab.0.center/48.27.1872.1053/1920.0.1600.900@48.27.1872.1053" timestamp="1600696494819" />
-    <state width="1766" height="275" key="GridCell.Tab.0.left" timestamp="1600696494819">
+    <state width="1766" height="275" key="GridCell.Tab.0.center/48.27.1872.1053/1920.0.1600.900@48.27.1872.1053" timestamp="1600790408688" />
+    <state width="1766" height="275" key="GridCell.Tab.0.left" timestamp="1600790408687">
       <screen x="48" y="27" width="1872" height="1053" />
     </state>
-    <state width="1766" height="275" key="GridCell.Tab.0.left/48.27.1872.1053/1920.0.1600.900@48.27.1872.1053" timestamp="1600696494819" />
-    <state width="1766" height="275" key="GridCell.Tab.0.right" timestamp="1600696494819">
+    <state width="1766" height="275" key="GridCell.Tab.0.left/48.27.1872.1053/1920.0.1600.900@48.27.1872.1053" timestamp="1600790408687" />
+    <state width="1766" height="275" key="GridCell.Tab.0.right" timestamp="1600790408688">
       <screen x="48" y="27" width="1872" height="1053" />
     </state>
-    <state width="1766" height="275" key="GridCell.Tab.0.right/48.27.1872.1053/1920.0.1600.900@48.27.1872.1053" timestamp="1600696494819" />
+    <state width="1766" height="275" key="GridCell.Tab.0.right/48.27.1872.1053/1920.0.1600.900@48.27.1872.1053" timestamp="1600790408688" />
     <state width="1826" height="340" key="GridCell.Tab.1.bottom" timestamp="1600647949831">
       <screen x="48" y="27" width="1872" height="1053" />
     </state>
