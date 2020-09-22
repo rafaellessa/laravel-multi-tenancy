@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="hcontrol_db@localhost" uuid="f6cc92c8-9285-4d40-b462-8c921605bf9e">
+      <database-info product="MySQL" version="5.7.31" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.21 (Revision: 33f65445a1bcc544eb0120491926484da168f199)" dbms="MYSQL" exact-version="5.7.31" exact-driver-version="8.0">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" qname="@" />
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+    <data-source name="hcontrol_db@localhost [2]" uuid="6dbb919e-6bb2-4a51-a963-b3cc17adc145">
+      <database-info product="Mongo DB" version="4.2.9" jdbc-version="4.2" driver-name="MongoDB JDBC Driver" driver-version="1.8.3" dbms="MONGO" exact-version="4.2.9" exact-driver-version="1.8" />
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <secret-storage>master_key</secret-storage>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" qname="@" />
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+  </component>
+</project>

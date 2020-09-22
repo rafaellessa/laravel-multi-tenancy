@@ -1,0 +1,132 @@
+version: "3.7"
+services:
+
+  account-api:
+    image: account-api
+    working_dir: /var/www/html
+    container_name: account-api
+    networks:
+      - rede-hcontrol
+    ports:
+      - ${ACCOUNT_API_HTTP_PORT:-8081}:80
+    depends_on:
+      - "hcontrol-redis"
+      - "hcontrol-mongo"
+    environment:
+      # Apache
+      APACHE_DOCUMENT_ROOT: /var/www/html/public
+      APP_ENV: ${APP_ENV}
+
+      # XDebug
+      XDEBUG_CONFIG: remote_host=host.docker.internal remote_autostart=1 remote_handler=dbgp
+
+      MASTER_SECRET: ${MASTER_SECRET}
+      JWT_SECRET: ${JWT_SECRET}
+
+      BROADCAST_DRIVER: redis
+      CACHE_DRIVER: redis
+      QUEUE_CONNECTION: redis
+      SESSION_DRIVER: redis
+      SESSION_LIFETIME: 120
+      REDIS_CLIENT: predis
+
+      DB_CONNECTION: mysql
+
+      # Mongo
+      MONGODB_HOST: hcontrol-mongo
+      MONGODB_PORT: 27017
+      MONGODB_DATABASE: hcontrol_db
+      MONGODB_USERNAME: ${MONGODB_USERNAME}
+      MONGODB_PASSWORD: ${MONGODB_PASSWORD}
+
+      #Mysql
+      DB_HOST: hcontrol-mysql
+      DB_PORT: 3306
+      DB_USERNAME: ${DB_USERNAME:-root}
+      DB_PASSWORD: ${DB_PASSWORD:-app#098}
+      DB_DATABASE: ${DB_DATABASE:-hcontrol_db}
+
+      # Redis
+      REDIS_HOST: hcontrol-redis
+      REDIS_PORT: 6379
+      REDIS_CACHE_DB: 0
+      REDIS_DB: 0
+      REDIS_PREFIX: "CacheHcontrol:"
+      CACHE_PREFIX: "APP:"
+      REDIS_QUEUE: queue_hcontrol
+
+      #Laravel
+      APP_NAME: Laravel
+      APP_KEY: "base64:M0JP2H3BuyX24Snb8DgEzPXoMwLo2FNgHt23FXHGw5k="
+
+    logging:
+      driver: "json-file"
+      options:
+        max-file: "2"
+        max-size: "10m"
+
+    restart: always
+
+  hcontrol-redis:
+    image: redis
+    container_name: hcontrol-redis
+    networks:
+      - rede-hcontrol
+
+    logging:
+      driver: "json-file"
+      options:
+        max-file: "2"
+        max-size: "10m"
+
+    restart: always
+
+  hcontrol-mongo:
+    image: mongo:4.2
+    container_name: hcontrol-mongo
+    networks:
+      - rede-hcontrol
+    volumes:
+      - mongodb:/data/db
+    environment:
+      MONGO_INITDB_DATABASE: hcontrol_db
+      MONGO_INITDB_ROOT_USERNAME: ${MONGODB_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGODB_PASSWORD}
+
+    logging:
+      driver: "json-file"
+      options:
+        max-file: "2"
+        max-size: "10m"
+
+    restart: always
+
+  hcontrol-mysql:
+    image: mysql:5.7
+    ports:
+      - "3306:3306"
+    networks:
+      - rede-hcontrol
+    container_name: hcontrol-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-app#098}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-hcontrol_db}
+
+    logging:
+      driver: "json-file"
+      options:
+        max-file: "2"
+        max-size: "10m"
+
+    restart: always
+
+
+volumes:
+  # Mongo DB
+  mongodb:
+    driver: local
+
+networks:
+  rede-hcontrol:
+    external: true
+
